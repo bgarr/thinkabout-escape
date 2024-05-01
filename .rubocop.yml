@@ -1,0 +1,21 @@
+require: 
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-rails
+  - rubocop-rspec_rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - './bin/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Rails/InferredSpecType:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/**/*'
