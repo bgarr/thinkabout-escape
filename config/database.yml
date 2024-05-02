@@ -17,3 +17,5 @@ test:
 production:
   <<: *default
   database: plan_my_escape_production
+  username: plan_my_escape
+  password: <%= ENV["PLAN_MY_ESCAPE_DATABASE_PASSWORD"] %>
