@@ -1,0 +1,19 @@
+# This workflow will install a prebuilt Ruby version, install dependencies, and
+# run tests and linters.
+name: "Deploy App to Heroku"
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate code
+        uses: ./.github/workflows/rubyonrails
+    
+      - name: Deploy App
+        uses: akhileshns/heroku-deploy@v3.13.15
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_API_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
