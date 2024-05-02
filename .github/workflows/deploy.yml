@@ -5,12 +5,16 @@ name: "Deploy App to Heroku"
 on: workflow_dispatch
 
 jobs:
-
+  runs:
+    uses: ./.github/workflows/rubyonrails
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: workflows/rubyonrails
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Validate code
+        uses: 
     
       - name: Deploy App
         uses: akhileshns/heroku-deploy@v3.13.15
