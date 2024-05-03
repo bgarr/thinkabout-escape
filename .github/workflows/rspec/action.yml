@@ -1,0 +1,16 @@
+name: Rspec Tests
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+    # dependencies
+    - uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+      with:
+        bundler-cache: true
+    # database setup
+    - name: Set up database schema
+      run: bin/rails db:schema:load
+    # test runners
+    - name: Run tests
+      run: bin/rspec

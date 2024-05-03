@@ -1,0 +1,16 @@
+name: Ruby Linting
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+    # dependencies
+    - uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+      with:
+        bundler-cache: true
+    - name: Security audit dependencies
+      run: gem install bundler-audit; bundle-audit check --update
+    - name: Security audit application code
+      run: gem install brakeman; brakeman -q -w2
+    - name: Lint Ruby files
+      run: bundle exec rubocop --parallel
