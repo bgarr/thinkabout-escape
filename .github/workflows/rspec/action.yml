@@ -27,7 +27,7 @@ runs:
         bundler-cache: true
     - name: Connect to Postgres
       shell: sh
-      run: sudo -u postgres createuser -s rails -P; sudo systemctl start postgresql.service
+      run: sudo systemctl start postgresql.service; sudo -u postgres createuser -s rails -P
     - name: Set up database schema
       shell: sh
       run: bin/rails db:schema:load
