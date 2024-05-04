@@ -26,6 +26,7 @@ runs:
       with:
         bundler-cache: true
     - name: Connect to Postgres
+      shell: sh
       run: node client.js
     - name: Set up database schema
       shell: sh
