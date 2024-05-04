@@ -27,7 +27,7 @@ runs:
         bundler-cache: true
     - name: Connect to Postgres
       shell: sh
-      run: node client.js
+      run: sudo systemctl start postgresql.service
     - name: Set up database schema
       shell: sh
       run: bin/rails db:schema:load
