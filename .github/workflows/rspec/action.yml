@@ -1,5 +1,5 @@
 name: Rspec Tests
-
+runs-on: ubuntu-latest
 services:
   postgres:
     image: postgres:14.11-alpine3.19
