@@ -2,7 +2,7 @@ name: Rspec Tests
 
 services:
   postgres:
-    image: postgres
+    image: postgres:14.11-alpine3.19
     ports:
       - "5432:5432"
     env:
@@ -26,14 +26,6 @@ runs:
     - uses: ruby/setup-ruby@cacc9f1c0b3f4eb8a16a6bb0ed10897b43b9de49 # v1.176.0
       with:
         bundler-cache: true
-    - run: sudo systemctl start postgresql.service
-      shell: bash
-
-    - run: sudo -u postgres createuser --createdb --superuser ${USER}
-      shell: bash
-
-    - run: createdb ${USER}
-      shell: bash
     - name: Set up database schema
       shell: bash
       run: bin/rails db:schema:load
