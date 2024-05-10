@@ -13,7 +13,7 @@ AllCops:
 Style/Documentation:
   Enabled: false
 
-Rails/InferredSpecType:
+RSpecRails/InferredSpecType:
   Enabled: false
 
 Metrics/BlockLength:
