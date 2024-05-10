@@ -1,0 +1,9 @@
+name: Typescript Linting
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+    - name: Lint Typescript files
+      shell: sh
+      run: yarn lint

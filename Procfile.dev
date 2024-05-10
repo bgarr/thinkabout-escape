@@ -1,1 +1,2 @@
 web: ./bin/rails s
+js: yarn build --watch

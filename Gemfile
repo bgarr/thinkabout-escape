@@ -98,3 +98,5 @@ group :test do
   gem 'capybara-screenshot'
   gem 'selenium-webdriver'
 end
+
+gem "jsbundling-rails", "~> 1.3"
