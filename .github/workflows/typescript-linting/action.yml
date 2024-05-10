@@ -8,7 +8,8 @@ runs:
       with: 
         node-version: '>=22.0.0'
     - name: Install modules
+      shell: bash
       run: yarn
     - name: Lint Typescript files
-      shell: sh
+      shell: bash
       run: yarn lint
