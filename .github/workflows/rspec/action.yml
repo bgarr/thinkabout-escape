@@ -10,6 +10,9 @@ runs:
     - name: Set up database schema
       shell: bash
       run: bin/rails db:schema:load
+    - name: Set up assets
+      shell: bash
+      run: bin/rails assets:precompile
     - name: Run tests
       shell: bash
       run: bin/rspec
