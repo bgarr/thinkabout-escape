@@ -34,4 +34,12 @@ export default [
       ...reactHooks.configs.recommended.rules,
     },
   },
+  {
+    languageOptions: {
+      "globals": {
+        "window": true,
+        "document": true
+      },
+    }
+  }
 ];

@@ -37,6 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/workflows/rspec
+      - uses: ./.github/workflows/jest
 
   lint:
     runs-on: ubuntu-latest
