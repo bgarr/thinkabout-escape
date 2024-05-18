@@ -6,6 +6,8 @@ runs:
     - uses: actions/setup-node@v4
       with: 
         node-version: '>=22.0.0'
+    - name: Install Yarn
+      run: npm install -g yarn
     - name: Install modules
       shell: bash
       run: yarn
