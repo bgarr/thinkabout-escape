@@ -11,6 +11,7 @@ runs:
       shell: bash
       run: bin/rails db:schema:load
     - name: Install Yarn
+      shell: bash
       run: npm install -g yarn
     - name: Set up assets
       shell: bash
