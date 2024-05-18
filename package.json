@@ -17,7 +17,7 @@
   "scripts": {
     "build": "esbuild app/javascript/src/entrypoints/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
     "lint": "eslint app/javascript/src/",
-    "test": "jest"
+    "test": "jest app/javascript/tests"
   },
   "type": "module",
   "devDependencies": {
