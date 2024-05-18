@@ -7,6 +7,9 @@ runs:
     - uses: ruby/setup-ruby@cacc9f1c0b3f4eb8a16a6bb0ed10897b43b9de49 # v1.176.0
       with:
         bundler-cache: true
+    - uses: actions/setup-node@v4
+      with: 
+        node-version: '>=22.0.0'
     - name: Set up database schema
       shell: bash
       run: bin/rails db:schema:load
