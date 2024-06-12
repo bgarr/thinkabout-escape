@@ -14,6 +14,11 @@ test:
   <<: *default
   database: plan_my_escape_test
 
+# for Cypress testing.
+cypress:
+  <<: *default
+  database: plan_my_escape_cypress
+
 production:
   <<: *default
   database: plan_my_escape_production
