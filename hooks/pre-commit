@@ -1,0 +1,42 @@
+!/usr/bin/env bash
+cd "$(git rev-parse --show-toplevel)"
+ 
+STAGED_TS_FILES=($(git diff --cached --name-only --diff-filter=ACM | grep ".tsx\{0,1\}$"))
+STAGED_RB_FILES=($(git diff --cached --name-only --diff-filter=ACM | grep ".rb$"))
+
+FAIL=""
+
+if [[ -n "${STAGED_TS_FILES[@]}" ]]; then
+echo "TSLint'ing ${#STAGED_TS_FILES[@]} files"
+  yarn lint "${STAGED_TS_FILES[@]}"
+  TSLINT_EXIT="$?"
+  
+  # Re-add files since they may have been fixed
+  git add "${STAGED_TS_FILES[@]}"
+  
+  if [[ "${TSLINT_EXIT}" -ne 0 ]]; then
+    printf "\n\033[41mCOMMIT FAILED:\033[0m Fix tslint errors and try again\n"
+      FAIL="true"
+    fi
+fi
+if [[ -n "${STAGED_RB_FILES[@]}" ]]; then
+echo "Rubocop'ing ${#STAGED_RB_FILES[@]} files"
+  rubocop -a "${STAGED_RB_FILES[@]}"
+  RUBOCOP_EXIT=$?
+  
+  # Re-add files since they may have been fixed
+  git add "${STAGED_RB_FILES[@]}"
+  
+  if [[ "${RUBOCOP_EXIT}" -ne 0 ]]; then
+    printf "\n\033[41mCOMMIT FAILED:\033[0m Fix rubocop errors and try again\n"
+        FAIL="true"
+      fi
+fi
+
+if [[ -n "${FAIL}" ]]; then
+exit 1
+fi
+
+printf "\n\033[42mCOMMIT SUCCEEDED\033[0m\n"
+
+exit $?
