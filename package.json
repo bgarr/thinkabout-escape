@@ -19,9 +19,10 @@
     "lint": "eslint --quiet app/javascript/src/**/*",
     "test": "jest app/javascript/tests",
     "cypress:compile": "RAILS_ENV=cypress bundle exec rails assets:precompile",
-    "cypress:rails": "RAILS_ENV=cypress bundle exec rails db:prepare && kill -9 'puma' || bundle exec rails s -e cypress -p 5002",
+    "cypress:rails": "RAILS_ENV=cypress bundle exec rails db:prepare || RAILS_ENV=cypress bundle exec rails s -e cypress -p 5002 -d",
     "cypress:local": "yarn cypress:compile && yarn cypress:rails",
-    "cypress:headless": "yarn cypress run --e2e --browser chrome --config-file \"./cypress.config.ts\""
+    "cypress:headless": "yarn cypress run --e2e --browser chrome --config-file \"./cypress.config.ts\"",
+    "cypress:ci": "export NO_PROXY=localhost; yarn cypress:local && yarn cypress:headless"
   },
   "type": "module",
   "devDependencies": {
