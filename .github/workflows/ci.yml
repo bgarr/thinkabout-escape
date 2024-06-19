@@ -38,6 +38,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/workflows/rspec
       - uses: ./.github/workflows/jest
+      - uses: ./.github/workflows/cypress
 
   lint:
     runs-on: ubuntu-latest

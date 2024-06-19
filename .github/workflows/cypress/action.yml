@@ -9,3 +9,4 @@ runs:
       with:
         build: yarn run build
         start: yarn start
+        browser: chrome
