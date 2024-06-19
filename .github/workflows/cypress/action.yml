@@ -5,4 +5,4 @@ runs:
   steps:
     - name: Run tests
       shell: bash
-      run: yarn cypress:ci
+      run: export NO_PROXY=localhost; yarn cypress:ci
