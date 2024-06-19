@@ -1,13 +1,17 @@
 name: Cypress End-to-end tests
 runs-on: ubuntu-latest
+inputs:
+  secret_key_base:
+    description: 'Rails Cypress key'
+    required: true
 runs:
   using: composite
   steps:
     - uses: actions/checkout@v4
     - name: Cypress run
-      env: 
-        RAILS_MASTER_KEY: ${{ secrets.RAILS_CYPRESS_KEY }}
       uses: cypress-io/github-action@v6
+      env:
+        secret_key_base: ${{ inputs.secret_key_base }}
       with:
         build: yarn cypress:local
         start: yarn cypress:headless
