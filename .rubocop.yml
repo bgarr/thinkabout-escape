@@ -19,3 +19,4 @@ RSpecRails/InferredSpecType:
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/**/*'
+    - 'db/schema.rb'
