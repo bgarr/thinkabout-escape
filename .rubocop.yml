@@ -20,3 +20,7 @@ RSpecRails/InferredSpecType:
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/**/*'
+
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/devise.rb'
