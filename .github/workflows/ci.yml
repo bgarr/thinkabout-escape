@@ -39,8 +39,6 @@ jobs:
       - uses: ./.github/workflows/rspec
       - uses: ./.github/workflows/jest
       - uses: ./.github/workflows/cypress
-        env: 
-          RAILS_MASTER_KEY: ${{ secrets.RAILS_CYPRESS_KEY }}
 
   lint:
     runs-on: ubuntu-latest

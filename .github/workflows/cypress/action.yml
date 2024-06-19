@@ -5,4 +5,10 @@ runs:
   steps:
     - uses: actions/checkout@v4
     - name: Cypress run
+      env: 
+        RAILS_MASTER_KEY: ${{ secrets.RAILS_CYPRESS_KEY }}
       uses: cypress-io/github-action@v6
+      with:
+        build: yarn cypress:local
+        start: yarn cypress:headless
+        browser: chrome
