@@ -1,4 +1,10 @@
 <%= form_with(model: game) do |form| %>
+  <ul>
+    <li>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </li>
+  </ul>
   <% if game.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(game.errors.count, "error") %> prohibited this game from being saved:</h2>

@@ -2,6 +2,7 @@
 
 class Game < ApplicationRecord
   belongs_to :owner, class_name: 'User'
+  validates :name, presence: true, uniqueness: true
 
   def self.ransackable_attributes(_auth_object = nil)
     %w[created_at id name updated_at]

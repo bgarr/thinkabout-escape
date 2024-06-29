@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 20_240_629_175_022) do # rubocop:disable Metrics/BlockLength
+ActiveRecord::Schema[7.1].define(version: 20_240_629_212_819) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.1].define(version: 20_240_629_175_022) do # rubocop:disab
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.bigint 'owner_id'
+    t.index ['name'], name: 'index_games_on_name', unique: true
     t.index ['owner_id'], name: 'index_games_on_owner_id'
   end
 

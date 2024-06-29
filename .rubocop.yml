@@ -8,6 +8,7 @@ require:
 AllCops:
   NewCops: enable
   Exclude:
+    - 'app/views/**/*.html.erb'
     - 'vendor/**/*'
     - './bin/**/*'
     - 'db/migrate/**/*'
@@ -28,6 +29,10 @@ RSpec/ExampleLength:
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/**/*'
+    - 'db/schema.rb'
+
+Metrics/MethodLength:
+  Max: 12
 
 Layout/LineLength:
   Exclude:
