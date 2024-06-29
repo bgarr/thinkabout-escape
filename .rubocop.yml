@@ -2,6 +2,7 @@ require:
   - rubocop-capybara
   - rubocop-factory_bot
   - rubocop-rails
+  - rubocop-rspec
   - rubocop-rspec_rails
 
 AllCops:
@@ -9,6 +10,7 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - './bin/**/*'
+    - 'db/migrate/**/*'
     - 'db/schema.rb'
 
 Style/Documentation:
@@ -17,6 +19,16 @@ Style/Documentation:
 RSpecRails/InferredSpecType:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 25
+
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/**/*'
+
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/devise.rb'

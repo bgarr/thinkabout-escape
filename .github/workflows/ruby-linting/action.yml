@@ -15,4 +15,4 @@ runs:
       run: gem install brakeman; brakeman -q -w2
     - name: Lint Ruby files
       shell: bash
-      run: bundle exec rubocop --parallel
+      run: bundle exec rubocop --parallel -c ./.rubocop.yml
