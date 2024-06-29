@@ -19,6 +19,12 @@ Style/Documentation:
 RSpecRails/InferredSpecType:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 25
+
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/**/*'

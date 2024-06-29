@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'games#index', js: true do
+describe 'games#index', :js do
   let!(:games) { create_list(:game, 2) }
 
   it 'lists existing games' do

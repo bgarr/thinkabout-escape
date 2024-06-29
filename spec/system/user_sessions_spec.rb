@@ -5,7 +5,7 @@ require 'rails_helper'
 describe 'user sessions' do
   let(:user) { create(:user) }
 
-  context 'account creation' do
+  describe 'account creation' do
     it 'emails a new user for confirmation' do
       visit root_path
       click_on 'Sign in'

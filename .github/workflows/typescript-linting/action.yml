@@ -12,4 +12,4 @@ runs:
       run: yarn
     - name: Lint Typescript files
       shell: bash
-      run: yarn lint
+      run: yarn lint:js
