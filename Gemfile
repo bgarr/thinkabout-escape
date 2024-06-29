@@ -4,8 +4,14 @@ source 'https://rubygems.org'
 
 ruby '3.3.1'
 
+# admin area
+gem 'activeadmin', '~> 3.2', '>= 3.2.2'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
+
+# Active Admin wants this.
+gem 'sassc-rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'

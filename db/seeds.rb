@@ -10,8 +10,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+admin_role = Role.find_or_create_by!(name: 'Admin')
 admin = User.find_by(first_name: 'Admin', last_name: 'User')
-admin ||= FactoryBot.create(:user, first_name: 'Admin', last_name: 'User', password: '123456',
-                                   password_confirmation: '123456')
-admin.skip_confirmation!
+admin ||= FactoryBot.create(:user, :confirmed, first_name: 'Admin', last_name: 'User', password: '123456',
+                                               password_confirmation: '123456', role: admin_role)
 Game.find_or_create_by!(name: 'Sample Escape Room', owner_id: admin.id)
+if Rails.env.development?
+  AdminUser.create!(email: 'admin@example.com', password: 'password',
+                    password_confirmation: 'password')
+end

@@ -20,4 +20,19 @@ describe 'user sessions' do
       expect(sent_email.to).to include(user.email)
     end
   end
+
+  describe 'authenticated user' do
+    let(:confirmed_user) { create(:user, :confirmed) }
+
+    it 'goes to game index' do
+      visit root_path
+      click_on 'Sign in'
+
+      fill_in('user_email', with: confirmed_user.email)
+      fill_in('user_password', with: confirmed_user.password)
+      click_on 'Log in'
+
+      expect(page).to have_current_path(games_path, ignore_query: true)
+    end
+  end
 end
