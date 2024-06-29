@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.2.4'
+ruby '3.3.1'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
@@ -70,6 +70,9 @@ group :development, :test do
   # https://github.com/faker-ruby/faker
   gem 'faker'
 
+  # https://github.com/rspec/rspec-rails
+  gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
+
   # https://github.com/rubocop/rubocop
   gem 'rubocop', '~> 1.63', require: false
 
@@ -93,9 +96,6 @@ group :development do
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
-  # https://github.com/rspec/rspec-rails
-  gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
-
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -104,5 +104,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'capybara-screenshot'
+  gem 'rspec', '~> 3.13'
   gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 5.3', '>= 5.3.1'
 end

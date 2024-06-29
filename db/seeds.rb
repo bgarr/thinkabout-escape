@@ -10,5 +10,8 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-admin = User.find_or_create_by!(first_name: 'Admin', last_name: 'User')
+admin = User.find_by(first_name: 'Admin', last_name: 'User')
+admin ||= FactoryBot.create(:user, first_name: 'Admin', last_name: 'User', password: '123456',
+                                   password_confirmation: '123456')
+admin.skip_confirmation!
 Game.find_or_create_by!(name: 'Sample Escape Room', owner_id: admin.id)
