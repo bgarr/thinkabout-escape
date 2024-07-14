@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.1'
+ruby '3.3.4'
 
 # admin area
 gem 'activeadmin', '~> 3.2', '>= 3.2.2'

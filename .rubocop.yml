@@ -12,7 +12,7 @@ AllCops:
     - 'vendor/**/*'
     - './bin/**/*'
     - 'db/migrate/**/*'
-    - 'db/schema'
+    - 'db/schema.rb'
     - 'docs/**/*'
 
 Style/Documentation:
