@@ -40,6 +40,9 @@ gem 'jbuilder'
 # use Postgres
 gem 'pg', '~> 1.5', '>= 1.5.6'
 
+# upgrade from rack 3.1.4 because of vulnerability
+gem 'rack', '~> 3.1', '>= 3.1.7'
+
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '>= 4.0.1'
 
