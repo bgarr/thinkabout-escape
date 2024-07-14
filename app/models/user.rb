@@ -13,6 +13,10 @@ class User < ApplicationRecord
        reset_password_token role_id unconfirmed_email updated_at]
   end
 
+  def self.all_names
+    all.map { |u| ["#{u.first_name} #{u.last_name}", u.id] }
+  end
+
   def admin?
     admin_role = Role.find_by(name: 'Admin')
     admin_role.present? && role == admin_role

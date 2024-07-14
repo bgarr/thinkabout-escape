@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_admin_role!
-    return if current_user.admin?
+    return if current_user&.admin?
 
     render plain: 'Not Authorized', status: :unauthorized
   end

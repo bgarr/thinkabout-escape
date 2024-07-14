@@ -1,0 +1,106 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table users {
+  id uuid [primary key]
+  first_name string
+  middle_name string
+  last_name string
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table rooms {
+  id uuid [primary key]
+  name string
+  model_file blob
+  logic string
+  public boolean
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table paths {
+  id uuid [primary key]
+  room_id uuid [pk, not null]
+  name string
+  curve jsonb
+  path_logic string
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table items {
+  id uuid [primary key]
+  name string
+  text string
+  model_file blob
+  logic string
+  puzzle_id uuid [pk]
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table item_slots {
+  id uuid [primary key]
+  path_id uuid [pk, not null]
+  path_location float
+  item_id uuid [pk, not null]
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table games {
+  id uuid [primary key]
+  name string
+  owner_id uuid [pk, not null]
+  room_id uuid [pk, not null]
+  public boolean
+}
+
+Table item_placements {
+  id uuid [primary key]
+  game_id uuid [pk, not null]
+  item_slot_id uuid [pk, not null]
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table puzzles {
+  id uuid [primary key]
+  name string
+  puzzle_logic string
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table game_plays {
+  id uuid [primary key]
+  player_id uuid [pk, not null]
+  game_id uuid [pk, not null]
+  solution_state jsonb
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Table puzzle_solutions {
+  id uuid [primary key]
+  puzzle_id uuid [pk, not null]
+  game_play_id uuid [pk, not null]
+  solution_state jsonb
+  created_at timestamp 
+  updated_at timestamp 
+}
+
+Ref: games.owner_id > users.id
+Ref: game_plays.player_id > users.id
+Ref: game_plays.game_id > games.id
+Ref: games.room_id > rooms.id
+Ref: paths.room_id > rooms.id
+Ref: items.puzzle_id - puzzles.id
+Ref: item_slots.item_id < items.id
+Ref: item_slots.path_id < paths.id
+Ref: puzzle_solutions.puzzle_id > puzzles.id
+Ref: puzzle_solutions.game_play_id > game_plays.id
+Ref: item_placements.item_slot_id - item_slots.id
+Ref: item_placements.game_id > games.id

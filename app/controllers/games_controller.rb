@@ -23,7 +23,7 @@ class GamesController < ApplicationController
   # POST /games or /games.json
   def create # rubocop:disable Metrics/AbcSize
     @game = Game.new(game_params)
-    @game.owner = current_user
+    @game.owner ||= current_user
 
     respond_to do |format|
       if @game.save
@@ -68,6 +68,6 @@ class GamesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def game_params
-    params.require(:game).permit(:name)
+    params.require(:game).permit(:name, :owner_id)
   end
 end

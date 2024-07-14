@@ -12,7 +12,8 @@ AllCops:
     - 'vendor/**/*'
     - './bin/**/*'
     - 'db/migrate/**/*'
-    - 'db/schema.rb'
+    - 'db/schema'
+    - 'docs/**/*'
 
 Style/Documentation:
   Enabled: false
