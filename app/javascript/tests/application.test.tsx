@@ -6,6 +6,6 @@ import { App } from "../src/entrypoints/application"
 describe("Application", () => {
   it("renders", () => {
     render(<App />)
-    expect(screen.getByRole("heading")).toHaveTextContent("Hello from Plan My Escape!")
+    expect(screen.getByRole("heading")).toHaveTextContent("Plan My Escape!")
   })
 })

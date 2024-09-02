@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
+    "allowJs": true,
     "lib": [
       "es5",
       "dom"
@@ -17,6 +18,7 @@
     ]
   },
   "include": [
-    "app/javascript/**/*.ts*"
-  ]
+    "app/javascript/**/*.ts*",
+    "app/javascript/**/*.js*"
+, "app/javascript/src/PrivateJet.jsx"  ]
 }
