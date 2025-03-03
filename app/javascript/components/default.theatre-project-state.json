@@ -1,0 +1,167 @@
+{
+  "sheetsById": {
+    "default": {
+      "staticOverrides": {
+        "byObject": {
+          "player": {
+            "position": {
+              "x": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "player": {
+            "trackData": {
+              "ZQn6vB-wqP": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "player:[\"position\",\"y\"]",
+                "keyframes": [
+                  {
+                    "id": "zilmVXoGcT",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "rX6wqmLqHs",
+                    "position": 2.733,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
+              },
+              "Y-Qh2q5dyB": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "player:[\"position\",\"x\"]",
+                "keyframes": [
+                  {
+                    "id": "afbLyFOlTV",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "DE8KKnvE51",
+                    "position": 1,
+                    "connectedRight": true,
+                    "handles": [
+                      0,
+                      0.99,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.5
+                  },
+                  {
+                    "id": "amcL_P8G7R",
+                    "position": 2.733,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.5
+                  }
+                ]
+              },
+              "stJWZDJF8-": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "player:[\"position\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "-3FkPRIbhl",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "tHSY7KA-TV",
+                    "position": 1,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -2
+                  },
+                  {
+                    "id": "6wTTnbAH21",
+                    "position": 2.733,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -2
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"position\",\"y\"]": "ZQn6vB-wqP",
+              "[\"position\",\"x\"]": "Y-Qh2q5dyB",
+              "[\"position\",\"z\"]": "stJWZDJF8-"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "gHcb1rHFhREKy6Br"
+  ]
+}

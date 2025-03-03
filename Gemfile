@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.4'
+ruby '3.3.6'
 
 # admin area
 gem 'activeadmin', '~> 3.2', '>= 3.2.2'
@@ -68,7 +68,10 @@ gem 'devise', '~> 4.9', '>= 4.9.4'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[mri windows]
+  gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
+
+  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  gem 'brakeman', require: false
 
   # https://github.com/thoughtbot/factory_bot
   gem 'factory_bot', '~> 6.4', '>= 6.4.6'
@@ -96,6 +99,8 @@ group :development, :test do
 
   # https://github.com/rubocop/rubocop-rspec
   gem 'rubocop-rspec', '~> 2.29', '>= 2.29.1'
+
+  gem 'vite_rails'
 end
 
 group :development do
@@ -114,6 +119,5 @@ group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'rspec', '~> 3.13'
-  gem 'selenium-webdriver'
   gem 'webdrivers', '~> 5.3', '>= 5.3.1'
 end

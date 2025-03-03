@@ -1,0 +1,12 @@
+<style>
+  .sky {
+    background-color: skyblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<%= content_tag :div, "", id: "game-edit", class: "sky", data: { game: @game.as_json } %>
+<%= vite_typescript_tag 'game-edit'  %>
