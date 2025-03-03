@@ -18,7 +18,7 @@ runs:
       run: npm install -g yarn
     - name: Set up assets
       shell: bash
-      run: bin/rails assets:precompile
+      run: bin/vite
     - name: Run tests
       shell: bash
       run: bin/rspec

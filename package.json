@@ -58,7 +58,7 @@
   },
   "scripts": {
     "build": "bin/vite build",
-    "lint:js": "eslint --quiet app/javascript/**/*",
+    "lint:js": "eslint --quiet",
     "lint:ruby": "bundle exec rubocop --parallel -c ./.rubocop.yml",
     "test": "",
     "cypress:compile": "RAILS_ENV=cypress bundle install && bundle exec rails assets:precompile",

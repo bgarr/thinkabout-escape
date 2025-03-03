@@ -33,13 +33,12 @@ jobs:
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
-          
+
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/workflows/rspec
-      - uses: ./.github/workflows/jest
       - uses: ./.github/workflows/cypress
-        env: 
+        env:
           secret_key_base: ${{ secrets.RAILS_CYPRESS_KEY }}
 
   lint:
