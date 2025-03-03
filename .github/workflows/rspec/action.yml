@@ -16,6 +16,9 @@ runs:
     - name: Install Yarn
       shell: bash
       run: npm install -g yarn
+    - name: Run dartsass
+      shell: bash
+      run: bin/rails dartsass:build
     - name: Run tests
       shell: bash
       run: bin/rspec
