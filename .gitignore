@@ -89,8 +89,8 @@ node_modules
 **/.DS_Store
 
 # Ignore large media files
-private/**/*.mp4
-private/**/*.hdr
-private/**/*.glb
-private/**/*.gltf
-private/**/*.bin
+app/frontend/**/*.mp4
+app/frontend/**/*.hdr
+app/frontend/**/*.glb
+app/frontend/**/*.gltf
+app/frontend/**/*.bin
