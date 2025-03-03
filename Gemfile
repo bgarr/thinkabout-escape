@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.6'
+ruby '3.4.1'
 
 # admin area
 gem 'activeadmin', '~> 3.2', '>= 3.2.2'
@@ -13,20 +13,12 @@ gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
 # Active Admin wants this.
 gem 'sassc-rails'
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
-
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
-
-# integrate with esbuild
-gem 'jsbundling-rails', '~> 1.3'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
@@ -56,7 +48,6 @@ gem 'redis', '>= 4.0.1'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
 
 # ### App-specific gems ### #
 
@@ -92,7 +83,6 @@ group :development, :test do
   gem 'rubocop-capybara', '~> 2.20'
 
   # https://github.com/discourse/rubocop-discourse
-  gem 'rubocop-discourse', '~> 3.7', '>= 3.7.1'
 
   # https://github.com/rubocop/rubocop-rails/
   gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
@@ -119,5 +109,7 @@ group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'rspec', '~> 3.13'
-  gem 'webdrivers', '~> 5.3', '>= 5.3.1'
+  gem 'webdrivers', '= 5.3.0'
 end
+
+gem "dartsass-rails", "~> 0.5.1"

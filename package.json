@@ -3,8 +3,9 @@
   "description": "a Web-based editor for making online escape room games.",
   "version": "0.1",
   "engines": {
-    "node": "22.x"
+    "node": "23.x"
   },
+  "type": "module",
   "private": true,
   "dependencies": {
     "@dimforge/rapier3d-compat": "^0.14.0",
@@ -21,18 +22,6 @@
     "svelte": "5.20.5",
     "three": "^0.172.0"
   },
-  "scripts": {
-    "build": "node esbuild.config.mjs",
-    "lint:js": "eslint --quiet app/javascript/**/*",
-    "lint:ruby": "bundle exec rubocop --parallel -c ./.rubocop.yml",
-    "test": "",
-    "cypress:compile": "RAILS_ENV=cypress bundle install && bundle exec rails assets:precompile",
-    "cypress:rails": "RAILS_ENV=cypress bundle exec rails db:prepare || bundle exec rails s -e cypress -p 5002 -d",
-    "cypress:local": "yarn cypress:compile && yarn cypress:rails",
-    "cypress:headless": "export NO_PROXY=localhost && yarn cypress run --e2e --config-file \"./cypress.config.ts\"",
-    "cypress:ci": "yarn cypress:local && yarn cypress:headless"
-  },
-  "type": "module",
   "devDependencies": {
     "@babel/core": "^7.26.9",
     "@babel/eslint-parser": "^7.26.8",
@@ -47,9 +36,6 @@
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^8.25.0",
     "cypress": "^13.9.0",
-    "cypress-esbuild-preprocessor": "sod/cypress-esbuild-preprocessor",
-    "esbuild": "^0.20.2",
-    "esbuild-rails": "^1.0.7",
     "eslint": "^9.5.0",
     "eslint-plugin-cypress": "^3.2.0",
     "eslint-plugin-security": "^3.0.0",
@@ -69,5 +55,16 @@
     "vite": "^5.0.0",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-ruby": "^5.1.0"
+  },
+  "scripts": {
+    "build": "bin/vite build",
+    "lint:js": "eslint --quiet app/javascript/**/*",
+    "lint:ruby": "bundle exec rubocop --parallel -c ./.rubocop.yml",
+    "test": "",
+    "cypress:compile": "RAILS_ENV=cypress bundle install && bundle exec rails assets:precompile",
+    "cypress:rails": "RAILS_ENV=cypress bundle exec rails db:prepare || bundle exec rails s -e cypress -p 5002 -d",
+    "cypress:local": "yarn cypress:compile && yarn cypress:rails",
+    "cypress:headless": "export NO_PROXY=localhost && yarn cypress run --e2e --config-file \"./cypress.config.ts\"",
+    "cypress:ci": "yarn cypress:local && yarn cypress:headless"
   }
 }
