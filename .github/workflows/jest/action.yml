@@ -4,8 +4,8 @@ runs:
   using: composite
   steps:
     - uses: actions/setup-node@v4
-      with: 
-        node-version: '>=22.0.0'
+      with:
+        node-version: ">=23.0.0"
     - name: Install Yarn
       shell: bash
       run: npm install -g yarn

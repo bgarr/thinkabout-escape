@@ -8,8 +8,8 @@ runs:
       with:
         bundler-cache: true
     - uses: actions/setup-node@v4
-      with: 
-        node-version: '>=22.0.0'
+      with:
+        node-version: ">=23.0.0"
     - name: Set up database schema
       shell: bash
       run: bin/rails db:schema:load
