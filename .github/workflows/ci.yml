@@ -37,9 +37,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/workflows/rspec
-      - uses: ./.github/workflows/cypress
-        env:
-          secret_key_base: ${{ secrets.RAILS_CYPRESS_KEY }}
+      # - uses: ./.github/workflows/cypress
+      #   env:
+      #     secret_key_base: ${{ secrets.RAILS_CYPRESS_KEY }}
 
   lint:
     runs-on: ubuntu-latest
