@@ -16,9 +16,6 @@ runs:
     - name: Install Yarn
       shell: bash
       run: npm install -g yarn
-    - name: Set up assets
-      shell: bash
-      run: bin/vite build
     - name: Run tests
       shell: bash
       run: bin/rspec
