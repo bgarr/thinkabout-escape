@@ -11,5 +11,6 @@
     "strict": true,
     "types": ["cypress", "node"]
   },
-  "include": ["app/frontend/**/*.ts*", "app/frontend/src/PrivateJet.jsx"]
+  "include": ["app/frontend/**/*.ts*", "app/frontend/src/PrivateJet.jsx"],
+  "sourceType": "module"
 }
