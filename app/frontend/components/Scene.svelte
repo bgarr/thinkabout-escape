@@ -1,7 +1,7 @@
 <script lang="ts">
   import { T } from "@threlte/core";
   import { Environment } from "@threlte/extras";
-  import PrivatePlaneInterior from "./PrivatePlaneInterior.svelte";
+  import PrivatePlaneInteriorWorking from "./PrivatePlaneInteriorWorking.svelte";
   import { type CollisionGroupsBitMask } from "@threlte/rapier";
   import { SheetObject } from "@threlte/theatre";
   import { MeshBasicMaterial } from "three";
@@ -52,4 +52,9 @@
     />
   {/snippet}
 </SheetObject>
-<PrivatePlaneInterior position={[0, 0, -1]} />
+<PrivatePlaneInteriorWorking
+  fallback={null}
+  children={null}
+  error={null}
+  position={[0, 0, -1]}
+/>

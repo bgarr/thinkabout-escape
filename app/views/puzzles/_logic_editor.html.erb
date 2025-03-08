@@ -1,0 +1,11 @@
+<style>
+  .chalkboard {
+    background-color:darkgray;
+    height: 50vh;
+    display: flex;
+    color: white;
+  }
+</style>
+
+<%= content_tag :div, "", id: "puzzle-edit", class: "chalkboard", data: { puzzle: @puzzle.as_json } %>
+<%= vite_typescript_tag 'puzzle-edit'  %>

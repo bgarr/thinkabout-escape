@@ -24,7 +24,7 @@ Rails.application.configure do
 
     #     policy.style_src   :self, :https
     # Allow @vite/client to hot reload style changes in development
-    #    policy.style_src *policy.style_src, :unsafe_inline if Rails.env.development?
+    policy.style_src(*policy.style_src, :unsafe_inline) if Rails.env.development?
 
     #     # Specify URI for violation reports
     #     # policy.report_uri "/csp-violation-report-endpoint"
@@ -35,5 +35,5 @@ Rails.application.configure do
   #   config.content_security_policy_nonce_directives = %w(script-src style-src)
   #
   #   # Report violations without enforcing the policy.
-  #   # config.content_security_policy_report_only = true
+  config.content_security_policy_report_only = true
 end

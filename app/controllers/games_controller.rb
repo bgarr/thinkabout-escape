@@ -2,6 +2,8 @@
 
 # GamesController is the main controller in the application.
 class GamesController < ApplicationController
+  content_security_policy false, only: :show
+
   before_action :set_game, only: %i[show edit update destroy]
 
   # GET /games or /games.json
