@@ -14,6 +14,7 @@ export default tseslint.config(
       "app/frontend/models",
       "app/frontend/active_admin",
       "app/frontend/rails-ujs.esm.js",
+      "app/frontend/puzzle_grammar.js",
       "public/",
       "**/*.d.ts",
     ],
