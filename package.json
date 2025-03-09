@@ -19,6 +19,7 @@
     "@threlte/rapier": "^3.0.0",
     "@threlte/theatre": "^3.0.0",
     "gltfjsx": "^6.4.1",
+    "highlight.js": "11",
     "lodash": "^4.17.21",
     "moo": "^0.5.2",
     "nearley": "^2.20.1",
@@ -62,6 +63,9 @@
     "vite": "^5.0.0",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-ruby": "^5.1.1"
+  },
+  "resolutions": {
+    "@typescript-eslint/parser": "^7.18.0"
   },
   "scripts": {
     "build": "bin/vite build --clear --mode=development",

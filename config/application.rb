@@ -15,6 +15,7 @@ require 'action_cable/engine'
 # require "sprockets/railtie"
 require 'rails/test_unit/railtie'
 
+require_relative '../lib/active_admin/admin_page_layout_override'
 require_relative '../lib/sprockets_override'
 
 # Require the gems listed in Gemfile, including any gems
