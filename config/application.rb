@@ -15,7 +15,6 @@ require 'action_cable/engine'
 # require "sprockets/railtie"
 require 'rails/test_unit/railtie'
 
-require_relative '../lib/active_admin/admin_page_layout_override'
 require_relative '../lib/sprockets_override'
 
 # Require the gems listed in Gemfile, including any gems
@@ -40,6 +39,6 @@ module PlanMyEscape
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    config.eager_load_paths << Rails.root.join('lib/active_admin/admin_page_layout_override')
   end
 end
