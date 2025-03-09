@@ -10,10 +10,9 @@ gem 'activeadmin', '~> 3.2', '>= 3.2.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
 
-# Active Admin wants this.
-gem 'sassc-rails'
+# Active Admin wants these.
 
-# Use sqlite3 as the database for Active Record
+gem 'dartsass', '~> 1.49'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 6.6'
@@ -64,6 +63,8 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
 
+  gem 'dartsass-rails', '~> 0.5.1'
+
   # https://github.com/thoughtbot/factory_bot
   gem 'factory_bot', '~> 6.4', '>= 6.4.6'
 
@@ -111,5 +112,3 @@ group :test do
   gem 'rspec', '~> 3.13'
   gem 'webdrivers', '= 5.3.0'
 end
-
-gem 'dartsass-rails', '~> 0.5.1'

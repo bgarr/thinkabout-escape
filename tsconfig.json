@@ -1,16 +1,21 @@
 {
   "compilerOptions": {
-    "module": "es2022",
-    "moduleResolution": "bundler",
+    "allowJs": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "allowJs": true,
     "lib": ["es5", "dom"],
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "outDir": "app/assets/builds",
     "skipLibCheck": true,
     "strict": true,
     "types": ["cypress", "node"]
   },
-  "include": ["app/frontend/**/*.ts*", "app/frontend/src/PrivateJet.jsx"],
+  "include": [
+    "app/frontend/**/*.ts*",
+    "app/frontend/**/*.js*",
+    "app/frontend/src/PrivateJet.jsx"
+  ],
   "sourceType": "module"
 }

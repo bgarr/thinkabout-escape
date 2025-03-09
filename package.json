@@ -3,7 +3,8 @@
   "description": "a Web-based editor for making online escape room games.",
   "version": "0.1",
   "engines": {
-    "node": "23.x"
+    "node": "23.x",
+    "yarn": "1.22.x"
   },
   "type": "module",
   "private": true,
@@ -51,6 +52,8 @@
     "path": "^0.12.7",
     "postinstall-postinstall": "^2.1.0",
     "punycode": "^2.3.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "sass": "^1.85.1",
     "three-engine-ts-types": "^1.0.36",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
@@ -58,10 +61,10 @@
     "url": "^0.11.4",
     "vite": "^5.0.0",
     "vite-plugin-full-reload": "^1.2.0",
-    "vite-plugin-ruby": "^5.1.0"
+    "vite-plugin-ruby": "^5.1.1"
   },
   "scripts": {
-    "build": "bin/vite build",
+    "build": "bin/vite build --clear --mode=development",
     "lint:js": "eslint --quiet",
     "lint:ruby": "bundle exec rubocop --parallel -c ./.rubocop.yml",
     "test": "",

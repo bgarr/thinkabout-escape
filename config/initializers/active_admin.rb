@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../../lib/active_admin/admin_page_layout_override'
+
 ActiveAdmin.setup do |config|
   # == Site Title
   #
