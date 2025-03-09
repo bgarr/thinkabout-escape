@@ -12,6 +12,8 @@ export default tseslint.config(
       "tsconfig.json",
       "app/frontend/draco",
       "app/frontend/models",
+      "app/frontend/active_admin",
+      "app/frontend/rails-ujs.esm.js",
       "public/",
       "**/*.d.ts",
     ],

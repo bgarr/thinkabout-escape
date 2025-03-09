@@ -63,8 +63,6 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
 
-  gem 'dartsass-rails', '~> 0.5.1'
-
   # https://github.com/thoughtbot/factory_bot
   gem 'factory_bot', '~> 6.4', '>= 6.4.6'
 
