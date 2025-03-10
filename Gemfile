@@ -90,6 +90,8 @@ group :development, :test do
   gem 'rubocop-rspec', '~> 2.29', '>= 2.29.1'
 
   gem 'vite_rails'
+
+  gem 'vite_ruby', '~> 3.9'
 end
 
 group :development do

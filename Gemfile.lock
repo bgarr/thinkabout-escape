@@ -424,6 +424,7 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   vite_rails
+  vite_ruby (~> 3.9)
   web-console
   webdrivers (= 5.3.0)
 
