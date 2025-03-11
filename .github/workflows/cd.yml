@@ -27,7 +27,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/workflows/rspec
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4.1"
+      - name: Install Vite
+        run: bundle install && bundle exec vite install
       - name: Install Heroku CLI
         run: |
           curl https://cli-assets.heroku.com/install.sh | sh
