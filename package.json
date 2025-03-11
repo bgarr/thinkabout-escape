@@ -68,7 +68,7 @@
     "@typescript-eslint/parser": "^7.18.0"
   },
   "scripts": {
-    "build": "bin/vite build --clear --mode=development",
+    "build:dev": "bin/vite build --clear --mode=development",
     "lint:js": "eslint --quiet",
     "lint:ruby": "bundle exec rubocop --parallel -c ./.rubocop.yml",
     "test": "",
