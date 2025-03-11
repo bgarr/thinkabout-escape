@@ -53,6 +53,10 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 # user auth boilerplate
 gem 'devise', '~> 4.9', '>= 4.9.4'
 
+gem 'vite_rails'
+
+gem 'vite_ruby', '~> 3.9'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -88,10 +92,6 @@ group :development, :test do
 
   # https://github.com/rubocop/rubocop-rspec
   gem 'rubocop-rspec', '~> 2.29', '>= 2.29.1'
-
-  gem 'vite_rails'
-
-  gem 'vite_ruby', '~> 3.9'
 end
 
 group :development do
