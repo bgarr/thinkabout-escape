@@ -6,4 +6,5 @@ class SprocketsOverride
   end
 
   def precompile=(_arg); end
+  def paths = []
 end

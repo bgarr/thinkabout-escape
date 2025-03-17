@@ -1,14 +1,9 @@
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { defineConfig } from "vite";
-import FullReload from "vite-plugin-full-reload";
-import RubyPlugin from "vite-plugin-ruby";
+import ViteRails from "vite-plugin-rails";
 
 export default defineConfig({
-  plugins: [
-    RubyPlugin(),
-    FullReload(["config/routes.rb", "app/views/**/*"]),
-    svelte(),
-  ],
+  plugins: [ViteRails(), svelte()],
   ssr: {
     noExternal: ["three", "troika-three-text"],
   },

@@ -55,8 +55,6 @@ gem 'devise', '~> 4.9', '>= 4.9.4'
 
 gem 'vite_rails'
 
-gem 'vite_ruby', '~> 3.9'
-
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -66,6 +64,8 @@ group :development, :test do
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
+
+  gem 'dartsass-rails', '~> 0.5.1'
 
   # https://github.com/thoughtbot/factory_bot
   gem 'factory_bot', '~> 6.4', '>= 6.4.6'

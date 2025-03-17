@@ -121,6 +121,9 @@ GEM
     crass (1.0.6)
     csv (3.3.2)
     dartsass (1.49.8)
+    dartsass-rails (0.5.1)
+      railties (>= 6.0.0)
+      sass-embedded (~> 1.63)
     date (3.4.1)
     debug (1.10.0)
       irb (~> 1.10)
@@ -147,6 +150,12 @@ GEM
     formtastic_i18n (0.7.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    google-protobuf (4.30.1)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.30.1-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
     has_scope (0.8.2)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
@@ -346,6 +355,11 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.4.1)
+    sass-embedded (1.85.1)
+      google-protobuf (~> 4.29)
+      rake (>= 13)
+    sass-embedded (1.85.1-arm64-darwin)
+      google-protobuf (~> 4.29)
     securerandom (0.4.1)
     selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -403,6 +417,7 @@ DEPENDENCIES
   capybara
   capybara-screenshot
   dartsass (~> 1.49)
+  dartsass-rails (~> 0.5.1)
   debug
   devise (~> 4.9, >= 4.9.4)
   factory_bot (~> 6.4, >= 6.4.6)
@@ -424,7 +439,6 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   vite_rails
-  vite_ruby (~> 3.9)
   web-console
   webdrivers (= 5.3.0)
 
