@@ -28,11 +28,13 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+gem 'json', '>= 2.10.2'
+
 # use Postgres
 gem 'pg', '~> 1.5', '>= 1.5.6'
 
 # upgrade from rack 3.1.4 because of vulnerability
-gem 'rack', '>= 3.1.11'
+gem 'rack', '>= 3.1.12'
 
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '>= 4.0.1'
