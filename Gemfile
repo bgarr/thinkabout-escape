@@ -8,7 +8,7 @@ ruby '3.4.1'
 gem 'activeadmin', '~> 3.3.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
+gem 'rails', '~> 7.2.2', '>= 7.2.2.1'
 
 # Active Admin wants these.
 

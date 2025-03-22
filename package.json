@@ -41,6 +41,7 @@
     "@types/three": "^0.169.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^8.25.0",
+    "@vitejs/plugin-basic-ssl": "^2.0.0",
     "cypress": "^13.9.0",
     "eslint": "^9.5.0",
     "eslint-plugin-cypress": "^3.2.0",
