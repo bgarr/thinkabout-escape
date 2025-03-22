@@ -3,13 +3,11 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  # rubocop:disable Lint/SuppressedException
   begin
     ActiveAdmin.routes(self)
-  rescue ActiveAdmin::DatabaseHitDuringLoad
+  rescue ActiveAdmin::DatabaseHitDuringLoad => e
+    Rails.logger.info(e)
   end
-  # rubocop:enable Lint/SuppressedException
-
   # Defines the root path route ("/")
   root 'home#index'
 
