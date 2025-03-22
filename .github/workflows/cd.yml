@@ -32,8 +32,8 @@ jobs:
           ruby-version: "3.4.1"
       - name: Install Vite
         run: bundle install && bundle exec vite install
-      - name: Migrate DB
-        run: bundle exec rails db:migrate
+      - name: Prep DB
+        run: bundle exec rails db:migrate && bundle exec rails db:seed
       - name: Install Heroku CLI
         run: |
           curl https://cli-assets.heroku.com/install.sh | sh
