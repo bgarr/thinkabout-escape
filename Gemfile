@@ -15,6 +15,9 @@ gem 'devise', '~> 4.9', '>= 4.9.4'
 # https://github.com/thoughtbot/factory_bot
 gem 'factory_bot', '~> 6.4', '>= 6.4.6'
 
+# https://github.com/thoughtbot/factory_bot_rails
+gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
@@ -70,9 +73,6 @@ group :development, :test do
   gem 'brakeman', require: false
 
   gem 'dartsass-rails', '~> 0.5.1'
-
-  # https://github.com/thoughtbot/factory_bot_rails
-  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
 
   # https://github.com/faker-ruby/faker
   gem 'faker'
