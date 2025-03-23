@@ -7,37 +7,42 @@ ruby '3.4.1'
 # admin area
 gem 'activeadmin', '~> 3.3.0'
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.2.2', '>= 7.2.2.1'
-
-# Active Admin wants these.
-
 gem 'dartsass', '~> 1.49'
 
-# Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 6.6'
+# user auth boilerplate
+gem 'devise', '~> 4.9', '>= 4.9.4'
+
+# https://github.com/thoughtbot/factory_bot
+gem 'factory_bot', '~> 6.4', '>= 6.4.6'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem 'importmap-rails'
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails'
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
+gem 'json', '>= 2.10.2'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-gem 'json', '>= 2.10.2'
-
 # use Postgres
 gem 'pg', '~> 1.5', '>= 1.5.6'
+
+# Use the Puma web server [https://github.com/puma/puma]
+gem 'puma', '~> 6.6'
 
 # upgrade from rack 3.1.4 because of vulnerability
 gem 'rack', '>= 3.1.12'
 
+# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'rails', '~> 7.2.2', '>= 7.2.2.1'
+
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '>= 4.0.1'
+
+# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem 'stimulus-rails'
+
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem 'turbo-rails'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -52,9 +57,6 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # ### App-specific gems ### #
 
-# user auth boilerplate
-gem 'devise', '~> 4.9', '>= 4.9.4'
-
 gem 'vite_rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -68,9 +70,6 @@ group :development, :test do
   gem 'brakeman', require: false
 
   gem 'dartsass-rails', '~> 0.5.1'
-
-  # https://github.com/thoughtbot/factory_bot
-  gem 'factory_bot', '~> 6.4', '>= 6.4.6'
 
   # https://github.com/thoughtbot/factory_bot_rails
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
