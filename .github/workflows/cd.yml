@@ -32,8 +32,6 @@ jobs:
           ruby-version: "3.4.1"
       - name: Install Vite
         run: bundle install && bundle exec vite install
-      - name: Prep DB
-        run: bundle exec rails db:migrate && bundle exec rails db:seed
       - name: Install Heroku CLI
         run: |
           curl https://cli-assets.heroku.com/install.sh | sh
@@ -44,4 +42,6 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_API_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           buildpack: "https://github.com/heroku/heroku-buildpack-ruby.git"
-          healthcheck: "https://plan-my-escape.herokuapp.com/health"
+          healthcheck: "https://plan-my-escape.herokuapp.com/up"
+      - name: Prep DB
+        run: bundle exec rails db:migrate && bundle exec rails db:seed
