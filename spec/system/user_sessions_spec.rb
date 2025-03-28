@@ -15,7 +15,7 @@ describe 'user sessions' do
       click_on 'Sign up'
 
       sent_email = ActionMailer::Base.deliveries.last
-      expect(sent_email.from).to include('accounts.plan-my-escape@thinkabout.com')
+      expect(sent_email.from).to include('accounts.thinkabout-escape@thinkabout.com')
       expect(sent_email.subject).to eq('Confirmation instructions')
       expect(sent_email.to).to include(user.email)
     end

@@ -1,3 +1,3 @@
-# plan-my-escape
+# thinakbout-escape
 
-Plan My Escape is a Web-based editor for 3D escape room experiences.
+ThinkAbout Escape is a Web-based editor for 3D escape room experiences.
