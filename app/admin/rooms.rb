@@ -10,6 +10,8 @@ ActiveAdmin.register Room do
       f.input :name
       f.input :owner, as: :select, collection: User.all_names
       f.input :model_file, as: :file
+
+      render 'rooms/path_plotter', { game: @game }
     end
     f.actions
   end

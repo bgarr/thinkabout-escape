@@ -9,7 +9,9 @@ ActiveAdmin.register Game do
     f.inputs 'Game Definition' do
       f.input :name
       f.input :owner, as: :select, collection: User.all_names
-      render 'games/path_plotter', { game: @game }
+
+      table_for resource.rooms, :sortable
+      f.input :rooms, as: :select, collection: Room.all
     end
     f.actions
   end
