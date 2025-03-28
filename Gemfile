@@ -26,6 +26,9 @@ gem 'json', '>= 2.10.2'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# 3/2025 vulnerability fix
+gem 'nokogiri', '>= 1.18.4'
+
 # use Postgres
 gem 'pg', '~> 1.5', '>= 1.5.6'
 
