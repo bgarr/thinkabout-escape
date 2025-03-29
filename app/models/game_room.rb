@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GameRoom < ApplicationRecord
   belongs_to :game
   belongs_to :room
