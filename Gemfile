@@ -7,6 +7,9 @@ ruby '3.4.1'
 # admin area
 gem 'activeadmin', '~> 3.3.0'
 
+# s3 service
+gem 'aws-sdk-s3', '~> 1.182'
+
 gem 'dartsass', '~> 1.49'
 
 # user auth boilerplate

@@ -3,8 +3,7 @@
   "description": "a Web-based editor for making online escape room games.",
   "version": "0.1",
   "engines": {
-    "node": "23.x",
-    "yarn": "1.22.x"
+    "node": "23.x"
   },
   "type": "module",
   "private": true,
